@@ -27,14 +27,6 @@ var iAmOnNode = false;
 var Canvas;
 var Image;
 var fs;
-if ( !!process && process.execPath ) {
-    iAmOnNode = true;
-}
-// if (iAmOnNode) {
-//   Canvas = require('canvas');
-//   Image = Canvas.Image;
-//   fs = require('fs');
-// }
 
 var vboxColorMap = {};
 
@@ -56,7 +48,7 @@ var CanvasImage = function (image) {
       document.body.appendChild(this.canvas);
       var img = image;
     }
-    
+
     this.context = this.canvas.getContext('2d');
 
     this.width  = this.canvas.width  = img.width;
@@ -109,7 +101,7 @@ ColorThief.prototype.getColor = function(sourceImage, quality, allowWhite) {
       allowWhite = quality;
       quality = undefined;
     }
-  
+
     var palette       = this.getPalette(sourceImage, 5, quality, allowWhite);
     var dominantColor = palette[0];
     return dominantColor;
@@ -392,7 +384,7 @@ var MMCQ = (function() {
                 b.vbox.count()*b.vbox.volume()
             )
         });;
-      
+
     }
     CMap.prototype = {
         push: function(vbox) {
@@ -464,7 +456,7 @@ var MMCQ = (function() {
             index = getColorIndex(rval, gval, bval);
             histo[index] = (histo[index] || 0) + 1;
         });
-      
+
         return histo;
     }
 
@@ -590,7 +582,7 @@ var MMCQ = (function() {
         // check that we aren't below maxcolors already
         var nColors = 0;
         histo.forEach(function() { nColors++ });
-      
+
         if (nColors <= maxcolors) {
             // XXX: generate the new colors from the histo and return
         }

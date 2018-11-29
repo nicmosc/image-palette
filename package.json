@@ -1,9 +1,9 @@
 {
-   "name": "image-palette",
+   "name": "@nicmosc/image-palette",
    "private": true,
    "scripts": {
-     "test": "lerna run test",
-     "build": "lerna run build"
+      "test": "lerna run test",
+      "build": "lerna run build"
    },
    "devDependencies": {
       "babel-cli": "^6.26.0",
