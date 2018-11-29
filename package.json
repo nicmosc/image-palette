@@ -1,6 +1,6 @@
 {
    "name": "@nicmosc/image-palette",
-   "private": true,
+   "private": false,
    "scripts": {
       "test": "lerna run test",
       "build": "lerna run build"

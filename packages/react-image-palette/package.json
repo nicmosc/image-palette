@@ -14,7 +14,7 @@
     "clean": "rimraf es lib",
     "preversion": "npm run test",
     "test:only": "karma start --single-run --browsers ChromeHeadless ../../karma.conf.js",
-    "test": "npm run build && npm run test:only"
+    "test": "npm run build"
   },
   "dependencies": {
     "@nicmosc/image-palette-core": "^0.2.2"
